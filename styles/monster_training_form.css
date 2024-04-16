@@ -1,3 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
 body {
-  background-color: black;
+  /* background-color: black; */
+}
+.signup-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.logo-container {
+  background-image: url(../assets/monster5.jpg) ;
+  background-position: center ;
+  /* background-repeat: no-repeat; */
+  /* background-size: cover; */
+  height: 100vh;
+  width: 400px;
+  color: white;
+  /* text-align: center; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.logo p {
+  display: inline-block;
+  padding-bottom: 5px;
+}
+.logo-image {
+  display: inline-block;
 }
