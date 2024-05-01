@@ -6,13 +6,14 @@
 
 
 body {
-  background-color: black;
+  background-color: white;
 }
 .signup-container {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100%;
+  margin: 0 200px 0 200px
 }
 .logo-container {
   background-image: url(../assets/monster5.jpg) ;
@@ -20,12 +21,24 @@ body {
   /* background-repeat: no-repeat; */
   /* background-size: cover; */
   height: 100vh;
-  width: 400px;
+  width: 50%;
   color: white;
   /* text-align: center; */
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.form-container {
+  width: 50%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.form-container header {
+  display: inline-block;
+  width: 25%;
 }
 .logo-area {
   border-radius: 5px;
