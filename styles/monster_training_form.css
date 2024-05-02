@@ -153,11 +153,11 @@ body {
 
 .float-left {
   float: left;
-  margin-left: 30px;
+  margin-left: 40px;
 }
 .right-input {
   float: right;
-  margin-right: 0;
+  margin-right: 40px;
 }
 .clear{
   clear:both;
@@ -167,7 +167,7 @@ span {
   font-size: .8rem;
 }
 .call-to-action {
-  color: white;
+  color: black;
 }
 .signup {
   background-color: #F9A239;

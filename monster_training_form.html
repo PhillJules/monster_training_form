@@ -48,10 +48,10 @@
       </div>
       <div class="form-section">
        <p>Lets do this!</p>
-       <form action="./monster_training_form.html">
+       <form action="#" method="post" id="monster-form">
         <div class="float-left">
           <label for="first-name">FIRST NAME:</label> <br>
-          <input type="text" id="first-name" name="first-name" required placeholder="&nbsp;Dracula">
+          <input type="text" id="first-name" name="first-name" required placeholder="&nbsp;Dracula" pattern="/^[a-zÀ-ÿ ,.'-]+$/i">
         </div>
          <div class="right-input">
           <label for="last-name">LAST NAME:</label> <br>
@@ -78,7 +78,7 @@
        </form>
       </div>
       <div class="submit-section">
-        <button type="button" class="signup">Create Account</button>
+        <button type="submit" class="signup" form="monster-form">Create Account</button>
       </div>
     </div>
 
