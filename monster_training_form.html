@@ -6,7 +6,7 @@
   <title>Document</title>
   <link rel="stylesheet" href="./styles/monster_training_form.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <script src="./monster_training.js"></script>
+  <script src="./monster_training.js" defer></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet">
@@ -48,7 +48,7 @@
       </div>
       <div class="form-section">
        <p>Lets do this!</p>
-       <form action="#" method="post" id="monster-form">
+       <form id="monster-form">
         <div class="float-left">
           <label for="first-name">FIRST NAME:</label> <br>
           <input type="text" id="first-name" name="first-name" required placeholder="&nbsp;Dracula" pattern="/^[a-zÀ-ÿ ,.'-]+$/i">
@@ -69,12 +69,22 @@
           <div class="clear">&nbsp;</div>
           <div class="float-left last-input">
             <label for="password">PASSWORD:</label> <br>
-            <input type="password" id="password" name="password" required placeholder="&nbsp;Password">
+            <input type="password" id="password" name="password" placeholder="&nbsp;Password"
+            title="Must contain at least one number and one uppercase and lowercase letter,
+            and at least 8 or more characters" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
           </div>
           <div class="right-input last-input">
             <label for="confirm-password">CONFIRM PASSWORD:</label> <br>
-            <input type="password" id="confirm-password" name="confirm-password" required placeholder="&nbsp;Password">
+            <input type="password" id="confirm-password" name="confirm-password" placeholder="&nbsp;Password">
+            <span id="message"></span>
           </div>
+          <!-- <div id="message">
+            <h3>Password must contain the following:</h3>
+            <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
+            <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
+            <p id="number" class="invalid">A <b>number</b></p>
+            <p id="length" class="invalid">Minimum <b>8 characters</b></p>
+          </div> -->
        </form>
       </div>
       <div class="submit-section">

@@ -9,8 +9,10 @@ function myFunction() {
 }
 
 
-// password = document.getElementById("password");
-// confirm_password = document.getElementById("confirm-password");
+// const password = document.getElementById("password");
+// const confirm_password = document.getElementById("confirm-password");
+
+
 
 // function validatePassword(){
 //   if(password.value != confirm_password.value) {
@@ -24,35 +26,37 @@ function myFunction() {
 
 // confirm_password.onchange = validatePassword;
 
+// const submit_button = document.querySelector(".signup");
 
-
-
-document.addEventListener("DOMContentLoaded", function() {
-  // Wait for the DOM to be fully loaded
-  var password = document.getElementById("password");
-  var confirm_password = document.getElementById("confirm-password");
-
-  if (password && confirm_password) {
-      // Check if both input elements exist
-      confirm_password.onchange = validatePassword;
-  } else {
-      console.error("Password or confirm password input element not found");
-  }
-});
+// // add event listener to submit button
+// submit_button.addEventListener("click", function(event){
+//   event.preventDefault();
+//   validatePassword();
+// })
 
 function validatePassword() {
-  var password = document.getElementById("password");
-  var confirm_password = document.getElementById("confirm-password");
+  const password = document.getElementById("password");
+  const confirm_password = document.getElementById("confirm-password");
 
-  if (password && confirm_password) {
-      // Ensure both input elements exist
-      if (password.value != confirm_password.value) {
-          confirm_password.setCustomValidity("Passwords Don't Match");
-      } else {
-          confirm_password.setCustomValidity('');
-      }
-      console.log("Password: " + password.value);
+  if (password.value != confirm_password.value) {
+    confirm_password.setCustomValidity("Passwords Don't Match");
+    document.getElementById("message").innerHTML = "Passwords don't match!"
   } else {
-      console.error("Password or confirm password input element not found");
+    confirm_password.setCustomValidity('');
+    document.getElementById("message").innerHTML = ""
   }
+  console.log("Password: " + password.value);
+  console.log("Confirm Password: " + confirm_password.value);
+  console.log(validatePassword)
 }
+
+const confirm_password = document.getElementById("confirm-password");
+confirm_password.addEventListener("change", validatePassword);
+
+// Prevent default form submission behavior and validate passwords on submit button click
+const submit_button = document.querySelector(".signup");
+submit_button.addEventListener("click", function(event) {
+  event.preventDefault(); // Prevent form submission
+  validatePassword(); // Validate passwords
+  // Additional logic for handling form submission if needed
+});

@@ -164,7 +164,8 @@ body {
 }
 span {
   color: #F9A239;
-  font-size: .8rem;
+  font-size: .5rem;
+  display: block;
 }
 .call-to-action {
   color: black;
@@ -183,4 +184,42 @@ span {
   display: flex;
   justify-content: center;
   margin-top: 30px;
+}
+
+
+/* The message box is shown when the user clicks on the password field */
+#message {
+  /* display:none; */
+  /* background: #F9A239; */
+  color: red;
+  position: relative;
+  /* padding: 20px; */
+  margin-top: 10px;
+}
+
+#message p {
+  /* padding: 10px 35px; */
+  font-size: .7rem;
+}
+
+ /* Add a green text color and a checkmark when the requirements are right */ */
+.valid {
+  color: green;
+}
+
+ .valid:before {
+  position: relative;
+  left: -35px;
+  content: "&#10004;";
+}
+
+ /* Add a red text color and an "x" icon when the requirements are wrong */
+.invalid {
+  color: red;
+}
+
+.invalid:before {
+  position: relative;
+  left: -35px;
+  content: "&#10006;";
 }
