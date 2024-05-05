@@ -8,39 +8,15 @@ function myFunction() {
   }
 }
 
-
-// const password = document.getElementById("password");
-// const confirm_password = document.getElementById("confirm-password");
-
-
-
-// function validatePassword(){
-//   if(password.value != confirm_password.value) {
-//     confirm_password.setCustomValidity("Passwords Don't Match");
-//   } else {
-//     confirm_password.setCustomValidity('');
-//   }
-//   console.log("password: " + password.value);
-// }
-
-
-// confirm_password.onchange = validatePassword;
-
-// const submit_button = document.querySelector(".signup");
-
-// // add event listener to submit button
-// submit_button.addEventListener("click", function(event){
-//   event.preventDefault();
-//   validatePassword();
-// })
-
 function validatePassword() {
   const password = document.getElementById("password");
   const confirm_password = document.getElementById("confirm-password");
 
-  if (password.value != confirm_password.value) {
+  if (confirm_password.value != password.value) {
     confirm_password.setCustomValidity("Passwords Don't Match");
     document.getElementById("message").innerHTML = "Passwords don't match!"
+    dicument.getElementById("message").style.display = "block";
+    confirm_password.style.border = "2px solid red";
   } else {
     confirm_password.setCustomValidity('');
     document.getElementById("message").innerHTML = ""
@@ -59,4 +35,14 @@ submit_button.addEventListener("click", function(event) {
   event.preventDefault(); // Prevent form submission
   validatePassword(); // Validate passwords
   // Additional logic for handling form submission if needed
+});
+
+// password pattern validation
+const password = document.getElementById("password");
+password.addEventListener("input", function() {
+  if (password.validity.patternMismatch) {
+    password.setCustomValidity("Password must contain at least 8 characters, including at least one letter and one number");
+  } else {
+    password.setCustomValidity("");
+  }
 });

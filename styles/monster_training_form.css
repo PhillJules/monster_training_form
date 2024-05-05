@@ -48,7 +48,7 @@ body {
   background-color: #C3C3C3;
   box-shadow: 0px 5px 5px grey;
 }
-.form-section p {
+#form-action-call {
   font-size: 1.2rem;
   margin: 20px 30px 10px 30px;
 }
@@ -196,10 +196,19 @@ span {
   /* padding: 20px; */
   margin-top: 10px;
 }
+#password-strength {
+  display:none;
+  /* background: #F9A239; */
+  color: red;
+  position: relative;
+  /* padding: 20px; */
+  margin-top: 10px;
+  font-size: .7rem;
+}
 
 #message p {
   /* padding: 10px 35px; */
-  font-size: .7rem;
+
 }
 
  /* Add a green text color and a checkmark when the requirements are right */ */
@@ -210,7 +219,7 @@ span {
  .valid:before {
   position: relative;
   left: -35px;
-  content: "&#10004;";
+  /* content: "&#10004;"; */
 }
 
  /* Add a red text color and an "x" icon when the requirements are wrong */
@@ -221,5 +230,10 @@ span {
 .invalid:before {
   position: relative;
   left: -35px;
-  content: "&#10006;";
+
+}
+input:focus {
+  border: #000 solid 2px;
+  box-shadow: 0px 5px 5px grey;
+
 }
