@@ -39,10 +39,4 @@ submit_button.addEventListener("click", function(event) {
 
 // password pattern validation
 const password = document.getElementById("password");
-password.addEventListener("input", function() {
-  if (password.validity.patternMismatch) {
-    password.setCustomValidity("Password must contain at least 8 characters, including at least one letter and one number");
-  } else {
-    password.setCustomValidity("");
-  }
-});
+let psw_error_message = document.getElementsByClassName("invalid");
