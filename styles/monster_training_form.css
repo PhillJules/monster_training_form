@@ -173,8 +173,8 @@ span {
 .signup {
   background-color: #F9A239;
   color: #000;
-  height: 45px;
-  width: 172px;
+  height: 35px;
+  width: 187px;
   font-size: 1.2rem;
   border: none;
   border-radius: 5px;
@@ -182,8 +182,10 @@ span {
 }
 .submit-section {
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  margin-top: 30px;
+  margin: 0 0 0 39px;
+  gap: 10px;
 }
 
 
@@ -198,11 +200,16 @@ span {
 }
 #password-strength {
   display:none;
-  /* background: #F9A239; */
-  color: red;
-  position: relative;
-  /* padding: 20px; */
-  margin-top: 10px;
+  background: rgba(255, 255, 245, .5);
+  color: black;
+  position: absolute;
+  top: 73%;
+  left: 64%;
+  padding: 15px;
+  border-radius: 0 5% 5% 5%;
+  width: 195px;
+  height: 100px;
+  /* margin-top: 10px; */
   font-size: .7rem;
 }
 
@@ -219,7 +226,7 @@ span {
  .valid:before {
   position: relative;
   left: -35px;
-  /* content: "&#10004;"; */
+  content: "✔";
 }
 
  /* Add a red text color and an "x" icon when the requirements are wrong */
@@ -230,6 +237,7 @@ span {
 .invalid:before {
   position: relative;
   left: -35px;
+  content: "✖";
 
 }
 input:focus {
@@ -237,3 +245,9 @@ input:focus {
   box-shadow: 0px 5px 5px grey;
 
 }
+/* #lowercase :invalid {
+  color: red;
+}
+#lowercase :valid {
+  color: green;
+} */

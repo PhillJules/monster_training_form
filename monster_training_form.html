@@ -71,7 +71,7 @@
             <label for="password">PASSWORD:</label> <br>
             <input type="password" id="password" name="password" placeholder="&nbsp;Password"
             title="Must contain at least one number and one uppercase and lowercase letter,
-            and at least 8 or more characters" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
+            and at least 8 or more characters" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=]).{8,}">
           </div>
           <div class="right-input last-input">
             <label for="confirm-password">CONFIRM PASSWORD:</label> <br>
@@ -79,16 +79,19 @@
             <span id="message"></span>
           </div>
           <div id="password-strength">
-            <p class="psw-str-title">Password must contain the following:</p>
-            <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
+            <div><h5 class="psw-str-title">Password must contain the following:</h5></div>
+
+            <p id="lowercase" class="invalid">A <b>lowercase</b> letter</p>
             <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
             <p id="number" class="invalid">A <b>number</b></p>
+            <p id="special" class="invalid">A <b>special character</b></p>
             <p id="length" class="invalid">Minimum <b>8 characters</b></p>
           </div>
        </form>
       </div>
       <div class="submit-section">
         <button type="submit" class="signup" form="monster-form">Create Account</button>
+        <p>Already have an account? <a href="./monster_training_form.html">Log in</a></p>
       </div>
     </div>
 
