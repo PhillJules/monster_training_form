@@ -20,6 +20,7 @@ function validatePassword() {
   } else {
     confirm_password.setCustomValidity('');
     document.getElementById("message").innerHTML = ""
+    confirm_password.style.border = "2px solid green";
   }
   console.log("Password: " + password.value);
   console.log("Confirm Password: " + confirm_password.value);
